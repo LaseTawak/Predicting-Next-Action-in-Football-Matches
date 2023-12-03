@@ -1,2 +1,1 @@
-# **Predicting Next Attacking Action in Football Matches**
-
+# Predicting Next Attacking Action in Football Matches
