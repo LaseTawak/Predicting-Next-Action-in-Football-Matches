@@ -9,7 +9,7 @@ To focus on attacking actions (actions on the ball), the data provided was clean
 
 The data was split using 8:1:1 for Train, Validation and Test respectively. Data was standardised and windowing was applied to the datasets.
 
-** Due to computing limitations, average distance from the ball for attacking player and defending players were used**
+**Due to computing limitations, average distance from the ball for attacking player and defending players were used**
 
 | Field Name          | Description |
 |---------------------|-------------|
