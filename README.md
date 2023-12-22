@@ -40,9 +40,12 @@ Embedding was used to handle categorical features over One-Hot encoding. Embeddi
 
 ## Results
 Different types of LSTM models were developed to also serve as a means of hyper-parameter tuning to obtain the best posisble model. Validation Loss was used during training to ensure model learning and F1 score and Recall were preferred to evaluate the model during testing. The best performing model is highlighted in blue.
+
 ![Screenshot 2023-09-07 191714](https://github.com/LaseTawak/Predicting-Next-Action-in-Football-Matches/assets/69163893/9f4239a7-7428-4e7d-a531-bb4c1403ccf4)
 
+
 The chart below shows how well the model predicts the 4 actions;
+
 ![Screenshot 2023-08-28 091741](https://github.com/LaseTawak/Predicting-Next-Action-in-Football-Matches/assets/69163893/868f05e0-e1fb-4fe1-a588-a3f967da3541)
 
 The final and selected model showed that it could do a great job at predicting the next action of a team in a football match. The confusion matrix produced by this model on the test is shown below. The model showed its best performance in predicting a player attempting to run or dribble with the ball as the next action, recalling 81% of such actions. The model was also  at predicting when a shot would be taken, this is particularly interesting given the class was the least represented in the dataset.
