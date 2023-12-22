@@ -39,3 +39,14 @@ The LSTM framework (Long Short-Term Memory) was selected based on these consider
 Embedding was used to handle categorical features over One-Hot encoding. Embeddings provide a reduction in dimensionality that One-Hot encoding does not which allows for 30 lower training time. Embeddings also have the potential to provide context and meaning representation of categories to the model which can help improve the accuracy of the model.
 
 ## Results
+Different types of LSTM models were developed to also serve as a means of hyper-parameter tuning to obtain the best posisble model. Validation Loss was used during training to ensure model learning and F1 score and Recall were preferred to evaluate the model during testing. The best performing model is highlighted in blue.
+![Screenshot 2023-09-07 191714](https://github.com/LaseTawak/Predicting-Next-Action-in-Football-Matches/assets/69163893/9f4239a7-7428-4e7d-a531-bb4c1403ccf4)
+
+The chart below shows how well the model predicts the 4 actions;
+![Screenshot 2023-08-28 091741](https://github.com/LaseTawak/Predicting-Next-Action-in-Football-Matches/assets/69163893/868f05e0-e1fb-4fe1-a588-a3f967da3541)
+
+The final and selected model showed that it could do a great job at predicting the next action of a team in a football match. The confusion matrix produced by this model on the test is shown below. The model showed its best performance in predicting a player attempting to run or dribble with the ball as the next action, recalling 81% of such actions. The model was also  at predicting when a shot would be taken, this is particularly interesting given the class was the least represented in the dataset.
+
+Furthermore, the ability of the model to accurately recall the next action as a Pass or Cross was at an above average rate. Even with the overall strong performance of the model and high representation of Passes, the confusion matrix showed the model struggled in predicting Passes, misrepresenting 20% of them for dribbles. 
+
+From the context of football matches, this confusion might be attributed to the possibility that passes in attacking situations are used to move the ball closer to the oppositions goal, which is also usually the main reason for running with the ball or trying to dribble. It can also be because of the data structure, the sequence of most events in the dataset, where dribbles are usually followed by passes. This common sequence could have resulted in the model picking up a sequence bias. Also, because of the creativity that comes from players in playing football, the mislabeling of passes might be because of each player's unique decision making in breaking out patterns and drawing on their own inspirations.
